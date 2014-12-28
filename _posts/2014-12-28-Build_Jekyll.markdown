@@ -8,7 +8,7 @@ categories:
 ---
 ##### 標題 : {{page.title}} #####
 
-  剛開始使用 github page 的功能，為了提醒自己，同時也能幫助其他使用者，所以寫下這一篇文章。 
+剛開始使用 github page 的功能，為了提醒自己，同時也能幫助其他使用者，所以寫下這一篇文章。 
 先列出目前為止看到相關的文章 
 
 + [jekylly](http://jekyllrb.com/docs/templates/) 
@@ -25,10 +25,7 @@ categories:
 
 1. 要有自己的 github 帳號，沒有的話直接申請即可。 
 2. [新增](https://github.com/new) repostory，名稱就是 $username.github.io。 
-3. 新增首頁 
-    
-    echo "test" > index.html
-    
+3. 新增首頁 echo "test" > index.html
 4. commit 後等一小段時間，輸入自己的 github page url "username.github.io"，就會出現剛剛的文字 test。
 
 到這邊為止，應該都可以很順利完成，接著是美化頁面，因為 github 是使用 jekyll 處理頁面的 templates，所
@@ -71,3 +68,7 @@ categories:
         │   └── DroidSansMono-webfont.woff
         ├── screen.css
         └── tomorrow_night.css
+
+
+主要需要有 _layouts / _posts / _includes 這三個目錄，另外要設定 _config.yml，詳細設定上面參考的網頁
+都有，所以這邊不多加贅述。如果都設定完成之後，應該就會有正常且漂亮的頁面出現了。
