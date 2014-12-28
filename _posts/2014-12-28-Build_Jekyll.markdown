@@ -1,7 +1,7 @@
 ---
 layout: post
 title: jekyll and github
-date: 2010-02-04 23:30:00 -08:00
+date: 2014-12-28 10:43:00 +08:00
 categories:
   -- jekyll
   -- github
