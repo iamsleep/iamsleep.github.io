@@ -20,16 +20,18 @@ categories:
 + [使用 Github Pages 创建个人 Wiki](http://junnan.org/blog/2011-06-23-create-wiki-on-github-pages.html) 
 
 
-  理論上參考上述的文章，就可以順利產生自己的 github page。為了怕看不懂或者使用不順利，所以寫出我自己的 
+理論上參考上述的文章，就可以順利產生自己的 github page。為了怕看不懂或者使用不順利，所以寫出我自己的 
 步驟。 
 
 1. 要有自己的 github 帳號，沒有的話直接申請即可。 
 2. [新增](https://github.com/new) repostory，名稱就是 $username.github.io。 
 3. 新增首頁 
+
     echo "test" > index.html
+
 4. commit 後等一小段時間，輸入自己的 github page url "username.github.io"，就會出現剛剛的文字 test。
 
-  到這邊為止，應該都可以很順利完成，接著是美化頁面，因為 github 是使用 jekyll 處理頁面的 templates，所
+到這邊為止，應該都可以很順利完成，接著是美化頁面，因為 github 是使用 jekyll 處理頁面的 templates，所
 以可以採用 jekyll 的 data structure 處理。data structure 如下：
     
     ├── 404.html
