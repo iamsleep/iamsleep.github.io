@@ -21,6 +21,7 @@ categories:
 
   理論上參考上述的文章，就可以順利產生自己的 github page。為了怕看不懂或者使用不順利，所以寫出我自己的 
 步驟。 
+
 1. 要有自己的 github 帳號，沒有的話直接申請即可。 
 2. [新增](https://github.com/new) repostory，名稱就是 $username.github.io。 
 3. 新增首頁 
