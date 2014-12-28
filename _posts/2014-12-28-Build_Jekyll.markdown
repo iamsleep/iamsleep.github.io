@@ -5,8 +5,7 @@ date: 2010-02-04 23:30:00 -08:00
 categories:
   -- jekyll
   -- github
-  -- codaset
 ---
-<h2>{{page.title}}</h2>
-<p> update </p>
-<p>{{page.date | date_to_string}}</p>
+{{page.title}}
+update
+{{page.date | date_to_string}}
