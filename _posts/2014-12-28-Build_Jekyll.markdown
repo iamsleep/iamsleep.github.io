@@ -17,7 +17,7 @@ categories:
 + [博客當如駭客 - Github Pages & Jekyll](http://chchwy.github.io/2012/12/Blogging-Like-a-Hacker-Github-Pages.html) 
 + [搭建一个免费的，无限流量的 Blog----github Pages 和 Jekyll 入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html) 
 + [github page structure](https://github.com/mojombo/tpw) 
-+ [使用 Github Pages 创建个人 Wiki](http://junnan.org/blog/2011-06-23-create-wiki-on-github-pages.html)
++ [使用 Github Pages 创建个人 Wiki](http://junnan.org/blog/2011-06-23-create-wiki-on-github-pages.html) 
 
   理論上參考上述的文章，就可以順利產生自己的 github page。為了怕看不懂或者使用不順利，所以寫出我自己的 
 步驟。 
