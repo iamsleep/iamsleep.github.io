@@ -7,4 +7,4 @@ categories:
 ---
 #### 標題 : {{page.title}} ####
 
-![Bilby Stampede](../images/1932656_756309894415788_7613545488651721032_o.jpg)
+![Bilby Stampede](../images/little_dog.jpg)
