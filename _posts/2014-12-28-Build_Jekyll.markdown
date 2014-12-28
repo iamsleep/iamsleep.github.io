@@ -8,7 +8,7 @@ categories:
 ---
 ##### 標題 : {{page.title}} #####
 
-剛開始使用 github page 的功能，為了提醒自己，同時也能幫助其他使用者，所以寫下這一篇文章 
+  剛開始使用 github page 的功能，為了提醒自己，同時也能幫助其他使用者，所以寫下這一篇文章。 
 先列出目前為止看到相關的文章 
 
 + [jekylly](http://jekyllrb.com/docs/templates/) 
@@ -17,4 +17,53 @@ categories:
 + [博客當如駭客 - Github Pages & Jekyll](http://chchwy.github.io/2012/12/Blogging-Like-a-Hacker-Github-Pages.html) 
 + [搭建一个免费的，无限流量的 Blog----github Pages 和 Jekyll 入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html) 
 + [github page structure](https://github.com/mojombo/tpw) 
++ [使用 Github Pages 创建个人 Wiki](http://junnan.org/blog/2011-06-23-create-wiki-on-github-pages.html)
 
+  理論上參考上述的文章，就可以順利產生自己的 github page。為了怕看不懂或者使用不順利，所以寫出我自己的 
+步驟。 
+1. 要有自己的 github 帳號，沒有的話直接申請即可。 
+2. [新增](https://github.com/new) repostory，名稱就是 $username.github.io。 
+3. 新增首頁 
+    echo "test" > index.html
+4. commit 後等一小段時間，輸入自己的 github page url "username.github.io"，就會出現剛剛的文字 test。
+
+  到這邊為止，應該都可以很順利完成，接著是美化頁面，因為 github 是使用 jekyll 處理頁面的 templates，所
+以可以採用 jekyll 的 data structure 處理。data structure 如下：
+    
+    ├── 404.html
+    ├── _config.yml
+    ├── _includes
+    │   ├── ga.html
+    │   ├── header.html
+    │   └── twitter.html
+    ├── _layouts
+    │   ├── default.html
+    │   ├── error.html
+    │   └── post.html
+    ├── _posts
+    │   └── 2014-12-28-Build_Jekyll.markdown
+    ├── atom.xml
+    ├── images
+    │   ├── bowling_kata_in_java.png
+    │   ├── jekyll_pygmentize.jpg
+    │   ├── rails3beta.jpg
+    │   └── rails3rc.jpg
+    ├── index.html
+    ├── javascript
+    │   └── highlight.pack.js
+    └── stylesheets
+        ├── fonts
+            │   ├── DroidSans-Bold-webfont.eot
+                │   ├── DroidSans-Bold-webfont.svg
+                    │   ├── DroidSans-Bold-webfont.ttf
+                        │   ├── DroidSans-Bold-webfont.woff
+                            │   ├── DroidSans-webfont.eot
+                                │   ├── DroidSans-webfont.svg
+                                    │   ├── DroidSans-webfont.ttf
+                                        │   ├── DroidSans-webfont.woff
+                                            │   ├── DroidSansMono-webfont.eot
+                                                │   ├── DroidSansMono-webfont.svg
+                                                    │   ├── DroidSansMono-webfont.ttf
+                                                        │   └── DroidSansMono-webfont.woff
+                                                            ├── screen.css
+                                                                └── tomorrow_night.css
