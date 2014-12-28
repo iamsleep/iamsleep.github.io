@@ -6,6 +6,10 @@ categories:
   -- jekyll
   -- github
 ---
-{{page.title}}
-update
+##### {{page.title}}
+=====
+剛開始使用 github page 的功能，為了提醒自己，同時也能幫助其他使用者，所以寫下這一篇文章 
+
+先列出目前為止看到相關的文章
++   [jekylly] (http://jekyllrb.com/docs/templates/)
 {{page.date | date_to_string}}
