@@ -57,17 +57,17 @@ categories:
     │   └── highlight.pack.js
     └── stylesheets
         ├── fonts
-            │   ├── DroidSans-Bold-webfont.eot
-                │   ├── DroidSans-Bold-webfont.svg
-                    │   ├── DroidSans-Bold-webfont.ttf
-                        │   ├── DroidSans-Bold-webfont.woff
-                            │   ├── DroidSans-webfont.eot
-                                │   ├── DroidSans-webfont.svg
-                                    │   ├── DroidSans-webfont.ttf
-                                        │   ├── DroidSans-webfont.woff
-                                            │   ├── DroidSansMono-webfont.eot
-                                                │   ├── DroidSansMono-webfont.svg
-                                                    │   ├── DroidSansMono-webfont.ttf
-                                                        │   └── DroidSansMono-webfont.woff
-                                                            ├── screen.css
-                                                                └── tomorrow_night.css
+        │   ├── DroidSans-Bold-webfont.eot
+        │   ├── DroidSans-Bold-webfont.svg
+        │   ├── DroidSans-Bold-webfont.ttf
+        │   ├── DroidSans-Bold-webfont.woff
+        │   ├── DroidSans-webfont.eot
+        │   ├── DroidSans-webfont.svg
+        │   ├── DroidSans-webfont.ttf
+        │   ├── DroidSans-webfont.woff
+        │   ├── DroidSansMono-webfont.eot
+        │   ├── DroidSansMono-webfont.svg
+        │   ├── DroidSansMono-webfont.ttf
+        │   └── DroidSansMono-webfont.woff
+        ├── screen.css
+        └── tomorrow_night.css
