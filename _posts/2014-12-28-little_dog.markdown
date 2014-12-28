@@ -7,4 +7,4 @@ categories:
 ---
 #### 標題 : {{page.title}} ####
 
-../images/bowling_kata_in_java.png
+![Bilby Stampede](../images/1932656_756309894415788_7613545488651721032_o.jpg)
