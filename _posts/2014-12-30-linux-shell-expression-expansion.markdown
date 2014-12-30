@@ -22,5 +22,5 @@ categories: [linux, bash]
 5. 两个#或两个%表示贪婪匹配，匹配最长的部分 
 6. 最后，剔除匹配部分。（*和分隔符直接看作匹配模式即可）
 
-ref [1] : http://blog.chinaunix.net/uid-25508399-id-3189037.html
+ref [1] : http://blog.chinaunix.net/uid-25508399-id-3189037.html 
 ref [2] : http://man.cx/sh%281%29/zh_tw#heading14
