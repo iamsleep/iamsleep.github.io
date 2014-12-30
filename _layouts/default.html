@@ -24,6 +24,18 @@
     <p>
             <table>
                 <tbody>
+                    {% for category in site.categories.CATEGORY %}
+                    <tr>
+                        <td>
+                            {{category }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <table>
+                <tbody>
                     {% for post in site.posts %}
                     <tr>
                         <td>

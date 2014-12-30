@@ -15,7 +15,7 @@ layout: nil
 
  {% for post in site.posts limit:100 %}
  <entry>
-   <title>1 {{ post.title }}</title>
+   <title>{{ post.title }}</title>
    {% for category in post.categories %}
    <category term="{{category}}" />
    {% endfor %}
