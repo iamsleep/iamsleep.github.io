@@ -9,11 +9,11 @@ categories: [linux, bash]
 paste -sd+ infile | bc 
 
 Using stdin: 
-```bash
+```shell
 <cmd> | paste -sd+ | bc
 ```
 
 Edit: With some paste implementations you need to be more explicit when reading from stdin: 
-```bash
+```shell
 <cmd> | paste -sd+ - | bc
 ```
