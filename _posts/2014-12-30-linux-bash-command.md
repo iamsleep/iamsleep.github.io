@@ -9,7 +9,7 @@ categories: [linux, bash]
 paste -sd+ infile | bc 
 
 Using stdin: 
-\<cmd\> | paste -sd+ | bc
+%3Ccmd%3E | paste -sd+ | bc
 
 Edit: With some paste implementations you need to be more explicit when reading from stdin: 
-<cmd> | paste -sd+ - | bc
+%3Ccmd%3E | paste -sd+ - | bc
