@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bash command to sum a column of numbers - Stack Overflow
-date: 2014-12-30 10:43:00 +08:00
+date: 2014-12-30 19:30:00 +08:00
 categories: [linux, bash]
 ---
 #### 標題 : {{page.title}} ####
