@@ -8,12 +8,8 @@ categories: [linux, bash]
 
 paste -sd+ infile | bc 
 
-Using stdin:
-<code>
+Using stdin: 
 <cmd> | paste -sd+ | bc
-</code>
 
-Edit: With some paste implementations you need to be more explicit when reading from stdin:
-<code>
+Edit: With some paste implementations you need to be more explicit when reading from stdin: 
 <cmd> | paste -sd+ - | bc
-</code>
