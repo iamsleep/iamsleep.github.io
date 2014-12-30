@@ -2,9 +2,7 @@
 layout: post
 title: jekyll and github
 date: 2014-12-28 10:43:00 +08:00
-categories:
-  -- jekyll
-  -- github
+categories: [jekyll, github]
 ---
 #### 標題 : {{page.title}} ####
 
