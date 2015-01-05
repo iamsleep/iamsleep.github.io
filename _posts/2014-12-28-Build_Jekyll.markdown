@@ -16,6 +16,9 @@ categories: [jekyll, github]
 + [搭建一个免费的，无限流量的 Blog----github Pages 和 Jekyll 入门](http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html) 
 + [github page structure](https://github.com/mojombo/tpw) 
 + [使用 Github Pages 创建个人 Wiki](http://junnan.org/blog/2011-06-23-create-wiki-on-github-pages.html) 
++ [Jekyll Related Posts ](http://zhangwenli.com/blog/2014/07/15/jekyll-related-posts-without-plugin/) 
++ [jekyllbootstrap](http://jekyllbootstrap.com/lessons/jekyll-introduction.html#toc_13) 
++ [jekyll study](http://github.tiankonguse.com/blog/2014/11/10/jekyll-study/) 
 
 
 理論上參考上述的文章，就可以順利產生自己的 github page。為了怕看不懂或者使用不順利，所以寫出我自己的 
