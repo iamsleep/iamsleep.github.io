@@ -18,13 +18,15 @@ categories: [git]
 填寫完畢後，想要透過這一個 application 使用 Oauth 的人，需要打兩次 command，順帶說明一下，client_id / redirect_uri / client_secret 是從註冊的 application 那邊得到。 
 首先是取得使用 Oauth 的權限，用下面的指令之後，需要由 web 點選同意後才可以進行下一步。
 
-{% highlight ruby %}
+{% highlight bash %}
 curl -H "https://git.corp.yahoo.com/login/oauth/authorize?client_id=****&redirect_uri=http://127.0.0.1" 
 {% endhighlight %}
 
 同意後再使用下面的指令，就可以取得 access token 
 
+{% highlight bash %}
 curl -H "https://git.corp.yahoo.com/login/oauth/access_token?client_id=****&client_secret=****&code=****" 
+{% endhighlight %}
 
 最後就可以使用 api 囉 
 
