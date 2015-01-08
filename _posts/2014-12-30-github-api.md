@@ -42,7 +42,7 @@ curl -H "Authorization: token **********" http://yourdomain/api/v3/apiname
 接著使用 access token 試著打 api
 
 {% highlight bash %}
-curl -u **********:x-oauth-basic  https://yourdomain/api/v3 
-{% endhighlight %}
+curl -s -H "Authorization: token yourtoken" https://yourdomain/api/v3/orgs/yourgroup/repos
+{% endhighlight bash %}
 
-待續...
+會拿到一串 jason format 的資料，再來就看個人怎麼處理了，因為我目前只是想要同時 fetch 所以會用到的 source code ...
