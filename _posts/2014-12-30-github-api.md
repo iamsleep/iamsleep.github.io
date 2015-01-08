@@ -37,7 +37,10 @@ curl -H "Authorization: token **********" http://yourdomain/api/v3/apiname
 到這邊為止是屬於第一種使用 Oauth 的方式。 
 
 接著是第二種，需要申請個人的 access token，要到這個[連結](https://github.com/settings/applications)，
-然後選擇 "Personal access tokens" 點選 Generate new token，產生一串的 serial number，
+然後選擇 "Personal access tokens" 點選 Generate new token，填寫 "Token description"，選擇需要使用的 scope，如下圖 
+
+![My helpful screenshot]({{ site.url }}/images/github-personal-token.jpg)
+
 
 接著使用 access token 試著打 api
 
