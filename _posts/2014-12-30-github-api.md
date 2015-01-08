@@ -11,7 +11,7 @@ categories: [git]
 1. api.github.com
 2. yourdomain.com/api/v3
 
-兩種方式都可以使用，第一種是使用Oauth，點選 "Developer applications" 的 "Register new application"， 
+兩種方式都可以使用，首先介紹第一種是使用Oauth，點選 "Developer applications" 的 "Register new application"， 
 填寫 application name、Home page url、application description、Authorization callback URL，這邊我的 Authorization callback URL 填寫是 http://127.0.0.1， 
 其餘都是隨意填寫。
 
@@ -19,24 +19,30 @@ categories: [git]
 首先是取得使用 Oauth 的權限，用下面的指令之後，需要由 web 點選同意後才可以進行下一步。
 
 {% highlight bash %}
-curl -H "https://git.corp.yahoo.com/login/oauth/authorize?client_id=****&redirect_uri=http://127.0.0.1" 
+curl -H "https://git.corp.yahoo.com/login/oauth/authorize?client_id=****&redirect_uri=http://127.0.0.1"
 {% endhighlight %}
 
 同意後再使用下面的指令，就可以取得 access token 
 
 {% highlight bash %}
-curl -H "https://git.corp.yahoo.com/login/oauth/access_token?client_id=****&client_secret=****&code=****" 
+curl -H "https://git.corp.yahoo.com/login/oauth/access_token?client_id=****&client_secret=****&code=****"
 {% endhighlight %}
 
 最後就可以使用 api 囉 
 
-curl -H "Authorization: token **********" http://yourdomain
+{% highlight bash %}
+curl -H "Authorization: token **********" http://yourdomain/api/v3/apiname
+{% endhighlight %}
 
-這邊我使用的是第二種，需要申請個人的 access token，要到這個[連結](https://github.com/settings/applications)，
+到這邊為止是屬於第一種使用 Oauth 的方式。 
+
+接著是第二種，需要申請個人的 access token，要到這個[連結](https://github.com/settings/applications)，
 然後選擇 "Personal access tokens" 點選 Generate new token，產生一串的 serial number，
 
 接著使用 access token 試著打 api
 
-curl -u **********:x-oauth-basic  https://yourdomain 
+{% highlight bash %}
+curl -u **********:x-oauth-basic  https://yourdomain/api/v3 
+{% endhighlight %}
 
 待續...
