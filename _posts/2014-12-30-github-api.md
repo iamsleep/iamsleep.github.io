@@ -45,7 +45,75 @@ curl -H "Authorization: token **********" http://yourdomain/api/v3/apiname
 接著使用 access token 試著打 api
 
 {% highlight bash %}
-curl -s -H "Authorization: token yourtoken" https://yourdomain/api/v3/orgs/yourgroup/repos
+curl -s -H "Authorization: token 1859f787a2ae0d0808ab4252d044e439e7ffb876" https://api.github.com/users/iamsleep/repos
 {% endhighlight bash %}
 
-會拿到一串 jason format 的資料，再來就看個人怎麼處理了，因為我目前只是想要同時 fetch 所以會用到的 source code ...
+會拿到一串 jason format 的資料如下，再來就看個人怎麼處理了，因為我目前只是想要同時 fetch 所以會用到的 source code ...
+{% highlight json %}
+  {
+    "id": 4365511,
+    "name": "vim",
+    "full_name": "iamsleep/vim",
+    "owner": {
+      "login": "iamsleep",
+      "id": 1548631,
+      "avatar_url": "https://avatars.githubusercontent.com/u/1548631?v=3",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/iamsleep",
+      "html_url": "https://github.com/iamsleep",
+      "followers_url": "https://api.github.com/users/iamsleep/followers",
+      "following_url": "https://api.github.com/users/iamsleep/following{/other_user}",
+      "gists_url": "https://api.github.com/users/iamsleep/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/iamsleep/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/iamsleep/subscriptions",
+      "organizations_url": "https://api.github.com/users/iamsleep/orgs",
+      "repos_url": "https://api.github.com/users/iamsleep/repos",
+      "events_url": "https://api.github.com/users/iamsleep/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/iamsleep/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "private": false,
+    "html_url": "https://github.com/iamsleep/vim",
+    "description": "vim",
+    "fork": false,
+    "url": "https://api.github.com/repos/iamsleep/vim",
+    "forks_url": "https://api.github.com/repos/iamsleep/vim/forks",
+    "keys_url": "https://api.github.com/repos/iamsleep/vim/keys{/key_id}",
+    "collaborators_url": "https://api.github.com/repos/iamsleep/vim/collaborators{/collaborator}",
+    "teams_url": "https://api.github.com/repos/iamsleep/vim/teams",
+    "hooks_url": "https://api.github.com/repos/iamsleep/vim/hooks",
+    "issue_events_url": "https://api.github.com/repos/iamsleep/vim/issues/events{/number}",
+    "events_url": "https://api.github.com/repos/iamsleep/vim/events",
+    "assignees_url": "https://api.github.com/repos/iamsleep/vim/assignees{/user}",
+    "branches_url": "https://api.github.com/repos/iamsleep/vim/branches{/branch}",
+    "tags_url": "https://api.github.com/repos/iamsleep/vim/tags",
+    "updated_at": "2014-12-16T03:39:22Z",
+    "pushed_at": "2014-12-16T03:39:22Z",
+    "git_url": "git://github.com/iamsleep/vim.git",
+    "ssh_url": "git@github.com:iamsleep/vim.git",
+    "clone_url": "https://github.com/iamsleep/vim.git",
+    "svn_url": "https://github.com/iamsleep/vim",
+    "homepage": "",
+    "size": 3152,
+    "stargazers_count": 0,
+    "watchers_count": 0,
+    "language": "VimL",
+    "has_issues": true,
+    "has_downloads": true,
+    "has_wiki": true,
+    "has_pages": false,
+    "forks_count": 0,
+    "mirror_url": null,
+    "open_issues_count": 0,
+    "forks": 0,
+    "open_issues": 0,
+    "watchers": 0,
+    "default_branch": "master",
+    "permissions": {
+      "admin": true,
+      "push": true,
+      "pull": true
+    }
+  }
+{% endhighlight json %}
