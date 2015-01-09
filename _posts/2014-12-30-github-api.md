@@ -39,7 +39,7 @@ curl -H "Authorization: token **********" http://yourdomain/api/v3/apiname
 接著是第二種，需要申請個人的 access token，要到這個[連結](https://github.com/settings/applications)，
 然後選擇 "Personal access tokens" 點選 Generate new token，填寫 "Token description"，選擇需要使用的 scope，如下圖 
 
-![My helpful screenshot]({{ site.url }}/images/github-personal-token.jpg)
+![My helpful screenshot]({{ site.url }}/images/github-personal-token.jpg =400x300)
 
 
 接著使用 access token 試著打 api
