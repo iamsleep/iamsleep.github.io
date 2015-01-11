@@ -136,9 +136,9 @@ curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f"  http
 
 第二種，搜尋 repository ，通常我們只記得片段的 component 名稱，這時候透過 [search](https://developer.github.com/v3/search/) 的功能相當方便，列出所有可能的 repositories， 
 這邊要注意的是 default search result 是 30 個，目前上限是 100，所以有可能會有漏掉，這點要特別注意。
-```bash
+{% highlight bash %}
 curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" "https://api.github.com/api/v3/search/repositories?q=ecpayment" | jq -r '.items[].ssh_url' 
-```bash
+{% endhighlight %}
 
 第三種，使用 api tag，對於管理很多 repository 的使用者來說，如果能透過 api 做到某些事情是很方便也節省時間，所以如果可以同時間把大量要同一時間要 release 的 repository 都下好 tag ，
 真的是在節省時間不過。可以參考 [git tag](https://developer.github.com/v3/git/tags/)
