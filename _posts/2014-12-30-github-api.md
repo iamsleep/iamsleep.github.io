@@ -140,6 +140,8 @@ curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f"  http
 curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" "https://api.github.com/api/v3/search/repositories?q=ecpayment" | jq -r '.items[].ssh_url' 
 {% endhighlight bash %}
 
+第三種，使用 api tag，對於管理很多 repository 的使用者來說，如果能透過 api 做到某些事情是很方便也節省時間，所以如果可以同時間把大量要同一時間要 release 的 repository 都下好 tag ，
+真的是在節省時間不過。可以參考 [git tag](https://developer.github.com/v3/git/tags/)
 
 附註
 1. [如何移除 jq 的output 中的 double quote](https://github.com/stedolan/jq/wiki/FAQ) 
