@@ -6,6 +6,7 @@ categories: [git]
 ---
 #### 標題 : {{page.title}} ####
 
+##簡介##
 研究了一下怎麼使用github api，api 的 [schema](https://developer.github.com/v3/#schema) 分成兩種
 
 1. api.github.com
@@ -117,8 +118,8 @@ curl -s -H "Authorization: token 1859f787a2ae0d0808ab4252d044e439e7ffb876" https
     }
   }
 {% endhighlight json %}
-
-
+ 
+ 
 ## 應用 ##
 > 接下來我們可以有幾種應用，不過我們需要先準備一個可以 parse json format 的工具， 
 > 選擇自己喜歡的方式，看是要自己寫 script 或是用現成的工具，這邊使用的是 [jq](http://stedolan.github.io/jq/) 
@@ -140,5 +141,5 @@ curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" "http
 
 
 附註
-1. [如何移除 jq 的output 中的 double quote](https://github.com/stedolan/jq/wiki/FAQ)
+1. [如何移除 jq 的output 中的 double quote](https://github.com/stedolan/jq/wiki/FAQ) 
 2. [xargs 使用 parallel](http://offbytwo.com/2011/06/26/things-you-didnt-know-about-xargs.html)
