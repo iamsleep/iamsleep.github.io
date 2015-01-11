@@ -119,10 +119,26 @@ curl -s -H "Authorization: token 1859f787a2ae0d0808ab4252d044e439e7ffb876" https
 {% endhighlight json %}
 
 
-接下來我們可以有幾種應用，不過我們需要先準備一個可以 parse json format 的工具，選擇自己喜歡的方式，看是要自己寫 script 或是用現成的工具，這邊使用的是 [jq](http://stedolan.github.io/jq/) 
+## 應用 ##
+> 接下來我們可以有幾種應用，不過我們需要先準備一個可以 parse json format 的工具， 
+> 選擇自己喜歡的方式，看是要自己寫 script 或是用現成的工具，這邊使用的是 [jq](http://stedolan.github.io/jq/) 
 
-假設想要下載 github 上的 repostory，比如找出目前我的目錄下有哪些 repostories，並且同時 clone
+第一種，假設想要下載 github 上的 repostory，比如找出目前我的目錄或者某個 group 有哪些 repostories，並且同時 clone
 {% highlight bash %}
 curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f"  https://api.github.com/users/iamsleep/repos  | jq -r '.[].ssh_url' | xargs -n 1 -P 10 git clone
 {% endhighlight bash %}
 
+{% highlight bash %}
+curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f"  https://api.github.com/orgs/test/repos  | jq -r '.[].ssh_url' | xargs -n 1 -P 10 git clone
+{% endhighlight bash %}
+
+
+第二種，搜尋 repository ，通常我們只記得片段的 component 名稱，這時候透過 [search](https://developer.github.com/v3/search/) 的功能相當方便，列出所有可能的 repositories
+{% highlight bash %}
+curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" "https://api.github.com/api/v3/search/repositories?q=ecpayment" | jq -r '.items[].ssh_url' 
+{% highlight bash %}
+
+
+附註
+1. [如何移除 jq 的output 中的 double quote](https://github.com/stedolan/jq/wiki/FAQ)
+2. [xargs 使用 parallel](http://offbytwo.com/2011/06/26/things-you-didnt-know-about-xargs.html)
