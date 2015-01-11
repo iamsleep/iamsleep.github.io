@@ -189,6 +189,7 @@ h1 {
   padding: 1em 3em;
   margin: 2em 6em;
   color: #999;
+  width: auto;
 }
 
 #post blockquote cite:before {
