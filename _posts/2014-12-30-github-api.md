@@ -47,7 +47,7 @@ curl -H "Authorization: token **********" http://yourdomain/api/v3/apiname
 
 {% highlight bash %}
 curl -s -H "Authorization: token 1859f787a2ae0d0808ab4252d044e439e7ffb876" https://api.github.com/users/iamsleep/repos
-{% endhighlight bash %}
+{% endhighlight %}
 
 會拿到一串 jason format 的資料如下，再來就看個人怎麼處理了，因為我目前只是想要同時 fetch 所以會用到的 source code ...
 {% highlight json %}
@@ -117,7 +117,7 @@ curl -s -H "Authorization: token 1859f787a2ae0d0808ab4252d044e439e7ffb876" https
       "pull": true
     }
   }
-{% endhighlight json %}
+{% endhighlight %}
  
  
 ## 應用 ##
@@ -127,11 +127,11 @@ curl -s -H "Authorization: token 1859f787a2ae0d0808ab4252d044e439e7ffb876" https
 第一種，假設想要下載 github 上的 repostory，比如找出目前我的目錄或者某個 group 有哪些 repostories，並且同時 clone
 {% highlight bash %}
 curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f"  https://api.github.com/users/iamsleep/repos  | jq -r '.[].ssh_url' | xargs -n 1 -P 10 git clone
-{% endhighlight bash %}
+{% endhighlight %}
 
 {% highlight bash %}
 curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f"  https://api.github.com/orgs/test/repos  | jq -r '.[].ssh_url' | xargs -n 1 -P 10 git clone
-{% endhighlight bash %}
+{% endhighlight %}
 
 
 第二種，搜尋 repository ，通常我們只記得片段的 component 名稱，這時候透過 [search](https://developer.github.com/v3/search/) 的功能相當方便，列出所有可能的 repositories， 
