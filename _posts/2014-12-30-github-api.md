@@ -50,7 +50,7 @@ curl -s -H "Authorization: token 1859f787a2ae0d0808ab4252d044e439e7ffb876" https
 {% endhighlight %}
 
 會拿到一串 jason format 的資料如下，再來就看個人怎麼處理了，因為我目前只是想要同時 fetch 所以會用到的 source code ...
-{% highlight json %}
+{% highlight json linenos %}
   {
     "id": 4365511,
     "name": "vim",
