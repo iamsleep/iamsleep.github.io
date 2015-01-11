@@ -117,3 +117,20 @@ curl -s -H "Authorization: token 1859f787a2ae0d0808ab4252d044e439e7ffb876" https
     }
   }
 {% endhighlight json %}
+
+
+接下來我們可以有幾種應用，不過我們需要先準備一個可以 parse json format 的工具，選擇自己喜歡的方式，看是要自己寫 script 或是用現成的工具，這邊使用的是 [jq](http://stedolan.github.io/jq/) 
+
+假設想要下載 github 上的 repostory，比如找出目前我的目錄下有哪些 repostories，並且同時 clone
+{% hightlight bash %}
+┌─∫iamsleep@ldev8.ac.corp.tw1.yahoo.com∫─∫~/git/testdir∫─∫newauction∫
+└───⟲  curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f"  https://api.github.com/users/iamsleep/repos  | jq -r '.[].ssh_url' | xargs -n 1 -P 10 git clone
+{% endhightlight bash %}
+
+
+假設想要下載 github 上的 repostory，比如找出目前我的目錄下有哪些 repostories，並且同時 clone
+{% hightlight bash %}
+┌─∫iamsleep@ldev8.ac.corp.tw1.yahoo.com∫─∫~/git/testdir∫─∫newauction∫
+└───⟲  curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f"  https://api.github.com/users/iamsleep/repos  | jq -r '.[].ssh_url' | xargs -n 1 -P 10 git clone
+{% endhightlight bash %}
+
