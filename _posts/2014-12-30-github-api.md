@@ -136,7 +136,7 @@ curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f"  http
 第二種，搜尋 repository ，通常我們只記得片段的 component 名稱，這時候透過 [search](https://developer.github.com/v3/search/) 的功能相當方便，列出所有可能的 repositories
 {% highlight bash %}
 curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" "https://api.github.com/api/v3/search/repositories?q=ecpayment" | jq -r '.items[].ssh_url' 
-{% highlight bash %}
+{% endhighlight bash %}
 
 
 附註
