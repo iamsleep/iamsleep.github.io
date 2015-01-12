@@ -147,7 +147,7 @@ curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" "http
 {% endhighlight %}
 
 回來的結果如下，可以知道這一個關鍵字總共有多少筆的搜尋結果( total_count )以及是否有更多的搜尋結果(incomplete_results)
-{% highlight bash linenos %}
+{% highlight json linenos %}
 {
   "total_count": 610759,
   "incomplete_results": false,
@@ -193,7 +193,7 @@ curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" "http
 {% endhighlight %}
 
 回傳一個 refs list，就是我們想要知道的 tag list
-{% highlight bash linenos %}
+{% highlight json linenos %}
 [
   {
     "ref": "refs/tags/v0.1",
@@ -213,7 +213,7 @@ curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" "http
 {% endhighlight %}
 
 回傳的結果
-{% highlight bash linenos %}
+{% highlight json linenos %}
 {
   "sha": "1c83d1f95521303ea5df626ae3474854179843b7",
   "url": "https://api.github.com/repos/iamsleep/iamsleep.github.io/git/tags/1c83d1f95521303ea5df626ae3474854179843b7",
