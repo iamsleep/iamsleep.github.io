@@ -177,7 +177,55 @@ curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" "http
 {% endhighlight %}
 
 第三種，使用 api tag，對於管理很多 repository 的使用者來說，如果能透過 api 做到某些事情是很方便也節省時間，所以如果可以同時間把大量要同一時間要 release 的 repository 都下好 tag ，
-真的是在節省時間不過。詳細使用參考參考 [git tag](https://developer.github.com/v3/git/tags/)
+真的是在節省時間不過。詳細使用參考 [git tag](https://developer.github.com/v3/git/tags/)
+<br/>
+<br/>
+首先我們先了解一下 tag 可以做什麼，tag 可以幫忙我們把 repository 記錄一個標籤，方便訊息的紀錄。
+如果說想要知道 repository 有哪些 tag，在 git tag 中介紹的使用方式需要帶有這一個 tag 的 commit sha1，但是通常會不知道怎麼去找，
+因為 commit 的不是你...，所以我們可以用下面的[方式](https://developer.github.com/v3/git/refs/#get-a-reference)取得tag list<br/>
+api 格式是 format repos/:user/:repos/git/refs/tags/
+{% highlight bash %}
+curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f"  "https://api.github.com/repos/iamsleep/iamsleep.github.io/git/refs/tags/"
+{% endhighlight %}
+回傳一個 refs list，就是我們想要知道的 tag list
+{% highlight bash linenos %}
+[
+  {
+    "ref": "refs/tags/v0.1",
+    "url": "https://api.github.com/repos/iamsleep/iamsleep.github.io/git/refs/tags/v0.1",
+    "object": {
+      "sha": "1c83d1f95521303ea5df626ae3474854179843b7",
+      "type": "tag",
+      "url": "https://api.github.com/repos/iamsleep/iamsleep.github.io/git/tags/1c83d1f95521303ea5df626ae3474854179843b7"
+    }
+  }
+]
+{% highlight %}
+如果已經知道 tag 的 sha1，就可以直接透過下面的方式取得 tag 相關的資訊
+{% highlight bash %}
+curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f"  "https://api.github.com/repos/iamsleep/iamsleep.github.io/git/tags/1c83d1f95521303ea5df626ae3474854179843b7"
+{% endhighlight %}
+回傳的結果
+{% highlight bash linenos %}
+{
+  "sha": "1c83d1f95521303ea5df626ae3474854179843b7",
+  "url": "https://api.github.com/repos/iamsleep/iamsleep.github.io/git/tags/1c83d1f95521303ea5df626ae3474854179843b7",
+  "tagger": {
+    "name": "iamsleep",
+    "email": "yoyoyoderek@gmail.com",
+    "date": "2015-01-12T00:24:56Z"
+  },
+  "object": {
+    "sha": "18b5637a92b2c1a4a9bf5e1a530c953a54ba1704",
+    "type": "commit",
+    "url": "https://api.github.com/repos/iamsleep/iamsleep.github.io/git/commits/18b5637a92b2c1a4a9bf5e1a530c953a54ba1704"
+  },
+  "tag": "v0.1",
+  "message": "my test v0.1\n"
+}
+{% endhighlight %}
+
+
 <br/>
 <br/>
 <br/>
