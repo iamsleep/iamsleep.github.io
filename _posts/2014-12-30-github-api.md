@@ -280,3 +280,4 @@ curl -s
 附註<br/>
 1. [如何移除 jq 的output 中的 double quote](https://github.com/stedolan/jq/wiki/FAQ)<br/>
 2. [xargs 使用 parallel](http://offbytwo.com/2011/06/26/things-you-didnt-know-about-xargs.html)<br/>
+3. [How to tag a Commit in API using curl command](http://stackoverflow.com/questions/15672547/how-to-tag-a-commit-in-api-using-curl-command)<br/>
