@@ -185,7 +185,7 @@ curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" "http
 因為 commit 的不是你...，所以我們可以用下面的[方式](https://developer.github.com/v3/git/refs/#get-a-reference)取得tag list<br/>
 api 格式是 format repos/:user/:repos/git/refs/tags/
 {% highlight bash %}
-curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f"  "https://api.github.com/repos/iamsleep/iamsleep.github.io/git/refs/tags/"
+curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" "https://api.github.com/repos/iamsleep/iamsleep.github.io/git/refs/tags/"
 {% endhighlight %}
 回傳一個 refs list，就是我們想要知道的 tag list
 {% highlight bash linenos %}
@@ -203,7 +203,7 @@ curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f"  "htt
 {% endhighlight %}
 如果已經知道 tag 的 sha1，就可以直接透過下面的方式取得 tag 相關的資訊
 {% highlight bash %}
-curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f"  "https://api.github.com/repos/iamsleep/iamsleep.github.io/git/tags/1c83d1f95521303ea5df626ae3474854179843b7"
+curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" "https://api.github.com/repos/iamsleep/iamsleep.github.io/git/tags/1c83d1f95521303ea5df626ae3474854179843b7"
 {% endhighlight %}
 回傳的結果
 {% highlight bash linenos %}
@@ -224,7 +224,33 @@ curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f"  "htt
   "message": "my test v0.1\n"
 }
 {% endhighlight %}
-
+最後介紹如何直接透過 [api](https://developer.github.com/v3/git/tags/#create-a-tag-object) 產生 tag
+![]
+![notice]({{ site.url }}/images/notice.png) 只有產生 tag object，repository 尚未被 tag
+{% highlight bash %}
+curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" -X POST -H "Content-Type: application/json" 
+     -d '{"tag":"v0.0.1","message":"initial version\n","object":"c3d0be41ecbe669545ee3e94d31ed9a4bc91ee3c","type":"commit","tagger":{"name":"Derek Yang","email":"yoyoyoderek@gmail.com","date":"2011-06-17T14:53:35-07:00"}}' 
+     "https://api.github.com/repos/iamsleep/iamsleep.github.io/git/tags"
+{% endhighlight %}
+回傳結果如下，
+{% highlight json linenos %}
+{
+  "sha": "1bcc66a86d436bf84e544529f2721aa8923f3f83",
+  "url": "https://api.github.com/repos/iamsleep/iamsleep.github.io/git/tags/1bcc66a86d436bf84e544529f2721aa8923f3f83",
+  "tagger": {
+    "name": "Derek Yang",
+    "email": "yoyoyoderek@gmail.com",
+    "date": "2015-01-12T01:58:08Z"
+  },
+  "object": {
+    "sha": "81235f5ac963f4340dc6b6887b593ab7b565110e",
+    "type": "commit",
+    "url": "https://api.github.com/repos/iamsleep/iamsleep.github.io/git/commits/81235f5ac963f4340dc6b6887b593ab7b565110e"
+  },
+  "tag": "v0.0.1",
+  "message": "initial version\n"
+}
+{% endhighlight %}
 
 <br/>
 <br/>
