@@ -7,12 +7,17 @@ categories: [git]
 #### 標題 : {{page.title}} ####
 
 ##簡介##
-研究了一下怎麼使用github api，api 的 [schema](https://developer.github.com/v3/#schema) 分成兩種
+研究了一下怎麼使用github api，api 的 host [schema](https://developer.github.com/v3/#schema) 分成兩種
 
 1. api.github.com
 2. yourdomain.com/api/v3
 
-兩種方式都可以使用，首先介紹第一種是使用Oauth，點選 "Developer applications" 的 "Register new application"， 
+兩種方式都可以使用<br/>
+
+##怎麼使用 API##
+
+###Oahth###
+首先介紹第一種是使用Oauth，點選 "Developer applications" 的 "Register new application"， 
 填寫 application name、Home page url、application description、Authorization callback URL，這邊我的 Authorization callback URL 填寫是 http://127.0.0.1， 
 其餘都是隨意填寫。
 
@@ -35,13 +40,11 @@ curl -H "https://git.corp.yahoo.com/login/oauth/access_token?client_id=****&clie
 curl -H "Authorization: token **********" http://yourdomain/api/v3/apiname
 {% endhighlight %}
 
-到這邊為止是屬於第一種使用 Oauth 的方式。 
-
+###Personal Token###
 接著是第二種，需要申請個人的 access token，要到這個[連結](https://github.com/settings/applications)，
 然後選擇 "Personal access tokens" 點選 Generate new token，填寫 "Token description"，選擇需要使用的 scope，如下圖 
 
-![My helpful screenshot]({{ site.url }}/images/github-personal-token.jpg)
-
+<img src="{{ site.url }}/images/github-personal-token.jpg" alt="notice" width="50%" hieght="50%"/>
 
 接著使用 access token 試著打 api
 
