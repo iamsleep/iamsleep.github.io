@@ -200,7 +200,7 @@ curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f"  "htt
     }
   }
 ]
-{% highlight %}
+{% endhighlight %}
 如果已經知道 tag 的 sha1，就可以直接透過下面的方式取得 tag 相關的資訊
 {% highlight bash %}
 curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f"  "https://api.github.com/repos/iamsleep/iamsleep.github.io/git/tags/1c83d1f95521303ea5df626ae3474854179843b7"
