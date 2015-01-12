@@ -16,7 +16,7 @@ categories: [git]
 
 ##怎麼使用 API##
 
-###Oahth###
+###Oauth###
 首先介紹第一種是使用Oauth，點選 "Developer applications" 的 "Register new application"， 
 填寫 application name、Home page url、application description、Authorization callback URL，這邊我的 Authorization callback URL 填寫是 http://127.0.0.1， 
 其餘都是隨意填寫。
