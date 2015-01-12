@@ -225,7 +225,7 @@ curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" "http
 }
 {% endhighlight %}
 最後介紹如何直接透過 [api](https://developer.github.com/v3/git/tags/#create-a-tag-object) 產生 tag<br/>
-<img src="{{ site.url }}/images/notice.png" alt="notice" width="10%" hieght="10%">只有產生 tag object，repository 尚未被 tag</img>
+<img src="{{ site.url }}/images/notice.png" alt="notice" width="2%" hieght="2%"/>只有產生 tag object，repository 尚未被 tag
 {% highlight bash %}
 curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" -X POST -H "Content-Type: application/json" 
      -d '{"tag":"v0.0.1","message":"initial version\n","object":"c3d0be41ecbe669545ee3e94d31ed9a4bc91ee3c","type":"commit","tagger":{"name":"Derek Yang","email":"yoyoyoderek@gmail.com","date":"2011-06-17T14:53:35-07:00"}}' 
