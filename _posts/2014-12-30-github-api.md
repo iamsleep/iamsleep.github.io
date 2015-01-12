@@ -143,7 +143,7 @@ curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" "http
 {% endhighlight %}
 
 回來的結果如下，可以知道這一個關鍵字總共有多少筆的搜尋結果( total_count )以及是否有更多的搜尋結果(incomplete_results)
-{% highlight bash %}
+{% highlight bash linenos %}
 {
   "total_count": 610759,
   "incomplete_results": false,
@@ -178,6 +178,6 @@ curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" "http
 第三種，使用 api tag，對於管理很多 repository 的使用者來說，如果能透過 api 做到某些事情是很方便也節省時間，所以如果可以同時間把大量要同一時間要 release 的 repository 都下好 tag ，
 真的是在節省時間不過。可以參考 [git tag](https://developer.github.com/v3/git/tags/)
 
-附註
+附註<br/>
 1. [如何移除 jq 的output 中的 double quote](https://github.com/stedolan/jq/wiki/FAQ)<br/>
 2. [xargs 使用 parallel](http://offbytwo.com/2011/06/26/things-you-didnt-know-about-xargs.html)<br/>
