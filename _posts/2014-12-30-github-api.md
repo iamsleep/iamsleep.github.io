@@ -250,6 +250,26 @@ curl -s -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" -X PO
   "message": "initial version\n"
 }
 {% endhighlight %}
+那要如何幫 repository 真的 tag ? 這時候需要 call 另一個 [api](https://developer.github.com/v3/git/refs/#create-a-reference)
+{% highlight bash %}
+curl -s 
+     -H "Authorization: token 6f3627f72b69b953e53d2a1418c5bfd9b8a6d41f" 
+     -H "Content-Type: application/json" 
+     -d '{"ref":"refs/tags/v0.0.1","sha":"1bcc66a86d436bf84e544529f2721aa8923f3f83"}' 
+     "https://api.github.com/repos/iamsleep/iamsleep.github.io/git/refs"
+{% endhighlight %}
+回傳結果如下，這樣表示已經 tag 成功。
+{% highlight json linenos %}
+{
+  "ref": "refs/tags/v0.0.1",
+  "url": "https://api.github.com/repos/iamsleep/iamsleep.github.io/git/refs/tags/v0.0.1",
+  "object": {
+    "sha": "1bcc66a86d436bf84e544529f2721aa8923f3f83",
+    "type": "tag",
+    "url": "https://api.github.com/repos/iamsleep/iamsleep.github.io/git/tags/1bcc66a86d436bf84e544529f2721aa8923f3f83"
+  }
+}
+{% endhighlight %}
 
 <br/>
 <br/>
