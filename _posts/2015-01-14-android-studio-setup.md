@@ -11,6 +11,7 @@ categories: [android]
 > 先進入 http://developer.android.com/tools/sdk/tools-notes.html <br/>
 > 下載後打開進入 tools/ ，執行 android 這支，選擇要下載的 sdk，就會更新所安裝的相關 packages. <br/>
 > 在開啟 Android Studio 開啟時，選擇 IDE 的 Configure -> Project Defaults -> Project Structure，如下圖<br/>
+
 <img src="{{ site.url }}/images/android-studio.png" alt="android-studio" width="70%" hieght="70%"/>
 
 - 設定 Android SDK location，選擇前面下載的 sdk manager 放的位子<br/>
