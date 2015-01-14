@@ -5,8 +5,7 @@ date: 2015-01-14 14:36:00 +08:00
 categories: [android]
 ---
 參考 [android-android-studio-for-mac](http://lazy-person-studio.blogspot.tw/2014/06/android-android-studio-for-mac.html)<br/>
-
-- 步驟大致上可以參考上面，唯獨要注意的就是 sdk 放的位子最好是自己找一個地方放，否則會有被蓋掉的風險<br/>
+步驟大致上可以參考上面，唯獨要注意的就是 sdk 放的位子最好是自己找一個地方放，否則會有被蓋掉的風險<br/>
 
 > 先進入 http://developer.android.com/tools/sdk/tools-notes.html <br/>
 > 下載後打開進入 tools/ ，執行 android 這支，選擇要下載的 sdk，就會更新所安裝的相關 packages. <br/>
