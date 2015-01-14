@@ -17,6 +17,8 @@ categories: [android]
 
 > /Users/iamsleep/android_sdk/sdk<br/>
 
-- 設定 JDK location<br/>
+- [設定 JDK location](http://stackoverflow.com/questions/15826202/where-is-java-7-installed-on-mac-os-x)<br/>
 
 > /Library/Java/JavaVirtualMachines/jdk1.7.0_71.jdk/Contents/Home<br/>
+
+這樣就可以順利開發自己的 Android APP 了
