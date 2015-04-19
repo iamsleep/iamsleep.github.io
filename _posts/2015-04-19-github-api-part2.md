@@ -12,7 +12,7 @@ categories: [git]
 
 進而研究了一下目前是不是有方法可以直接從 terminal 直接下 command 就能夠達到我們的目的，google 告訴我們很多想要的結果，像是 hub，
 就可以達到我們想要的目標，但是呢，需要裝 GO，這樣讓我覺得不太合適，因為這樣又多了一個 dependency, 需要安裝額外的東西，而其他的
-幾乎都是模擬瀏覽器點擊，所以，還是決定自己去寫一個只需要執行 bash，就可以做到這件事情的工具，目前寫好了初版，放在[這]()。
+幾乎都是模擬瀏覽器點擊，所以，還是決定自己去寫一個只需要執行 bash，就可以做到這件事情的工具，目前寫好了初版，放在[這](https://github.com/iamsleep/git-pr)。
 
   首先，請參考 [github api v3 - pull request](https://developer.github.com/v3/pulls/#create-a-pull-request) 中介紹
 的內容：
