@@ -1,6 +1,6 @@
 ---
 layout: post
-title: github api
+title: github api - pull request
 date: 2015-04-19 11:11:00 +08:00
 categories: [git]
 ---
@@ -24,4 +24,4 @@ categories: [git]
 
 首先，需我們需要 [github api access token](http://iamsleep.github.io/2015/01/12/github-api/#disqus_thread)，
 有了 token 後，輸入 `git config --global user.token` 。再來是確定有裝 [jq](http://stedolan.github.io/jq/)。
-接著執行git-pr，輸入 message 以及 title 後，送出即可。
+接著執行 `git-pr`，輸入 message 以及 title 後，送出即可。
