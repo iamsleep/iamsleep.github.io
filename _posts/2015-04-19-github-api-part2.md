@@ -23,5 +23,5 @@ categories: [git]
 我們將會使用 create 的 api 產生新的 pull request。
 
 首先，需我們需要 [github api access token](http://iamsleep.github.io/2015/01/12/github-api/#disqus_thread)，
-有了 token 後，輸入` git config --global user.token ` 
+有了 token 後，輸入` git config --global user.token `，再來是確定有裝 [jq](http://stedolan.github.io/jq/)，
 接著執行 `git-pr`，輸入 message 以及 title 後，送出即可。
